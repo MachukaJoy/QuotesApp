@@ -17,6 +17,14 @@ export class QuoteComponent implements OnInit {
     new Quote (3, 'Kaavia James', "'We are going to need more wine.'", 'Gabrielle Union', new Date(2015,1,1)),
   ]
 
+
+  addNewQuote(quote: any){
+    let quotesLength = this.quotes.length;
+    quote.index = quotesLength+1;
+    quote.datePost = new Date (quote.datePost);
+    this.quotes.unshift(quote);
+  }
+
   constructor() { }
 
   ngOnInit(): void {

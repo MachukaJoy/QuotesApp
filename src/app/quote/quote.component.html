@@ -16,7 +16,7 @@
   <div class="card card-body">
   <h2>Quotes sometimes are just what you need to get you up!</h2>
   <div class="row">
-    <app-quote-input-form></app-quote-input-form>
+    <app-quote-input-form (addQuote)="addNewQuote($event)"></app-quote-input-form>
   </div>
 </div>
 </div>
@@ -24,7 +24,8 @@
 <div class="container">
   <div class="card card-body">
     <div >
-      // add details of quotes here
+      <div *ngFor = 'let quote of quotes; let i = index'>    
+        <app-quote-details ></app-quote-details>
       <hr>
     </div>
   </div>
