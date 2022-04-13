@@ -25,6 +25,16 @@ export class QuoteComponent implements OnInit {
     this.quotes.unshift(quote);
   }
 
+  unWanted(isDeleted: any, index: number){
+    if (isDeleted){
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].author}'s quote?`)
+
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
