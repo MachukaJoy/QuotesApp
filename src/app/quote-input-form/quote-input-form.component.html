@@ -1,11 +1,14 @@
-<div class ="container-fluid">
+<div class="container-fluid">
   <form (ngSubmit)='submitQuote(); quoteForm.reset()' #quoteForm='ngForm' class="form-group card-body ">
-    <input type="text" placeholder="Orator" class="form-control m-2" name="author" [(ngModel)]="newQuote.author" #author='ngModel' required>        
+    <input type="text" placeholder="Quote by" class="form-control m-2" name="author" [(ngModel)]="newQuote.author"
+      #author='ngModel' required>
 
-    <textarea name="quote" class="form-control m-2" placeholder="Type your quote" id="" cols="80" rows="10"  [(ngModel)]="newQuote.quote" #quote='ngModel' required></textarea>
+    <textarea name="quote" class="form-control m-2" placeholder="Type your quote" id="" cols="80" rows="10"
+      [(ngModel)]="newQuote.quote" #quote='ngModel' required></textarea>
 
-    <input type="text" placeholder="UsersName" class="form-control m-2" name="submitter" [(ngModel)]="newQuote.submitter" #submitter='ngModel' required>
+    <input type="text" placeholder="Submitted by" class="form-control m-2" name="submitter"
+      [(ngModel)]="newQuote.submitter" #submitter='ngModel' required>
 
-    <button type="submit" class="btn bg-dark m-2">Submit  <i class="fa fa-telegram"></i></button>
-</form>
+    <button type="submit" class="btn bg-dark m-2">Submit <i class="fa fa-telegram"></i></button>
+  </form>
 </div>

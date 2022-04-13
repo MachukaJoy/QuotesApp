@@ -8,6 +8,7 @@ import { QuoteInputFormComponent } from './quote-input-form/quote-input-form.com
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DateCountPipe } from './date-count.pipe';
 import { AppRoutingModule } from './app-routing.module';
+import { ClickDirective } from './click.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     QuoteComponent,
     QuoteInputFormComponent,
     QuoteDetailsComponent,
-    DateCountPipe
+    DateCountPipe,
+    ClickDirective
   ],
   imports: [
     BrowserModule,
